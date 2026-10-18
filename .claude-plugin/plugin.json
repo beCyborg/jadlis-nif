@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "jadlis-nif",
+  "version": "1.0.0",
+  "displayName": "Jadlis — гид по методу нейроинтеграции",
+  "description": "Скилл /nif ведёт по методу нейроинтеграции Катерины Ленгольд: где ты в спринте, ответ по методу со ссылкой на урок, одна практика в остром состоянии по зоне шкалы НейроБаланса, разбор своего планирования, проекты спринта Фундамент / Драйв / Кайф. Работает сам по себе: весь метод пересказан своими словами внутри плагина, материалы курса не нужны. Неофициальный конспект.",
+  "author": {
+    "name": "Be Cyborg"
+  },
+  "homepage": "https://gitlab.com/beCyborg/jadlis-nif",
+  "repository": "https://gitlab.com/beCyborg/jadlis-nif",
+  "keywords": [
+    "jadlis",
+    "neurointegration",
+    "nif",
+    "sprint",
+    "stress",
+    "habits"
+  ],
+  "userConfig": {
+    "PROFILE_PATH": {
+      "type": "string",
+      "title": "Личный профиль (необязательно)",
+      "description": "Путь к своему nif-profile.md: свои ритуалы, ссылки на заметки, номер экстренной службы, команда личного календаря. Пусто — скилл работает по умолчанию.",
+      "default": "",
+      "required": false
+    }
+  }
+}
