@@ -481,18 +481,18 @@ body.touring main{padding-bottom:150px}
   <div class="wrap" id="nav">
     <a class="brand" href="#top">НИФ</a>
     <a href="#problems">Зачем</a>
-    <a href="#map">Программа</a>
-    <a href="#iceberg">Айсберг</a>
-    <a href="#actions">Действия</a>
-    <a href="#state">Состояние</a>
+<!--@if personal-->    <a href="#map">Программа</a>
+<!--@endif-->    <a href="#iceberg">Айсберг</a>
+<!--@move:navActions-->    <a href="#actions">Действия</a>
+<!--@endmove-->    <a href="#state">Состояние</a>
     <a href="#thinking">Мышление</a>
-    <a href="#cycle">Цикл</a>
+<!--@put:navActions-->    <a href="#cycle">Цикл</a>
     <a href="#links">Связи</a>
     <a href="#kit">Практики</a>
 <!--@slot:navRoute--><!--@endslot-->
     <a href="#numbers">Числа</a>
-    <a href="#science">Наука</a>
-    <a href="#skill">Скилл</a>
+<!--@if personal-->    <a href="#science">Наука</a>
+<!--@endif-->    <a href="#skill">Скилл</a>
 <!--@if share-->    <a href="#install">Поставить</a>
 <!--@endif-->  </div>
 </nav>
@@ -501,7 +501,7 @@ body.touring main{padding-bottom:150px}
 
 <header class="hero">
   <h1>Нейроинтеграция наглядно</h1>
-  <p class="lede">Курс Катерины Ленгольд на одной странице, с нуля. Идея простая. Сначала выравниваешь состояние. Потом замечаешь привычные сценарии мышления. Потом меняешь жизнь маленькими порциями, короткими спринтами.</p>
+  <p class="lede"><!--@if personal-->Курс Катерины Ленгольд на одной странице, с нуля.<!--@endif--><!--@if share-->Метод Катерины Ленгольд на одной странице, с нуля.<!--@endif--> Идея простая. Сначала выравниваешь состояние. Потом замечаешь привычные сценарии мышления. Потом меняешь жизнь маленькими порциями, короткими спринтами.</p>
   <div class="hs" aria-label="Шкала НейроБаланса">
     <div class="hs-wrap"><div class="hs-ptr" id="hs-ptr"></div><div class="hs-bar" id="hs-bar"></div></div>
     <div class="hs-groups"><span style="color:var(--z2)">выгорание</span><span style="color:var(--z4)">интеграция</span><span style="color:var(--z7)">дистресс</span></div>
@@ -523,15 +523,15 @@ body.touring main{padding-bottom:150px}
     <p class="lede muted">Узнал себя — жми на карточку и смотри сцену, где метод это разбирает.</p>
   </div>
   <div class="pgrid">
-    <a class="prob" href="#homeo"><b>Ставлю большие цели — и бросаю</b><span>Психика держит привычную норму и откатывает резкие перемены. Метод меняет не больше 10% времени за раз, короткими спринтами.</span><em>Уроки 1.2, 1.4 →</em></a>
-    <a class="prob" href="#cort"><b>Стресс копится</b><span>Новая волна стресса стартует с остатка прошлой. Метод учит замечать зону, снижать пик и выводить стресс, пока не началась спираль.</span><em>Уроки 2.2–2.8 →</em></a>
-    <a class="prob" href="#orbits"><b>Знаю, что делать, но откладываю</b><span>Часто это автопилот: игнорирование, подготовка или борьба. Метод учит замечать такой сценарий и выбирать маршрут сознательно.</span><em>Уроки 4.1–5.2 →</em></a>
-    <a class="prob" href="#gasbrake"><b>Живу только гонкой</b><span>Новое подряд, без передышки, притупляет мотивацию. Метод чередует Драйв с Кайфом — удовольствием от того, что уже есть.</span><em>Уроки 1.3, 1.5 →</em></a>
-    <a class="prob" href="#refl"><b>Не вижу прогресса</b><span>Мозг легко запоминает плохое и быстро забывает хорошее. Короткие рефлексии и итоги спринта делают прогресс видимым.</span><em>Уроки 1.7, 5.3 →</em></a>
+    <a class="prob" href="#homeo"><b>Ставлю большие цели — и бросаю</b><span>Психика держит привычную норму и откатывает резкие перемены. Метод меняет не больше 10% времени за раз, короткими спринтами.</span><!--@if personal--><em>Уроки 1.2, 1.4 →</em><!--@endif--><!--@if share--><em>Смотреть сцену →</em><!--@endif--></a>
+    <a class="prob" href="#cort"><b>Стресс копится</b><span>Новая волна стресса стартует с остатка прошлой. Метод учит замечать зону, снижать пик и выводить стресс, пока не началась спираль.</span><!--@if personal--><em>Уроки 2.2–2.8 →</em><!--@endif--><!--@if share--><em>Смотреть сцену →</em><!--@endif--></a>
+    <a class="prob" href="#orbits"><b>Знаю, что делать, но откладываю</b><span>Часто это автопилот: игнорирование, подготовка или борьба. Метод учит замечать такой сценарий и выбирать маршрут сознательно.</span><!--@if personal--><em>Уроки 4.1–5.2 →</em><!--@endif--><!--@if share--><em>Смотреть сцену →</em><!--@endif--></a>
+    <a class="prob" href="#gasbrake"><b>Живу только гонкой</b><span>Новое подряд, без передышки, притупляет мотивацию. Метод чередует Драйв с Кайфом — удовольствием от того, что уже есть.</span><!--@if personal--><em>Уроки 1.3, 1.5 →</em><!--@endif--><!--@if share--><em>Смотреть сцену →</em><!--@endif--></a>
+    <a class="prob" href="#refl"><b>Не вижу прогресса</b><span>Мозг легко запоминает плохое и быстро забывает хорошее. Короткие рефлексии и итоги спринта делают прогресс видимым.</span><!--@if personal--><em>Уроки 1.7, 5.3 →</em><!--@endif--><!--@if share--><em>Смотреть сцену →</em><!--@endif--></a>
   </div>
 </section>
 
-<!-- ================= MAP ================= -->
+<!--@if personal--><!-- ================= MAP ================= -->
 <section class="part" id="map">
   <div class="part-head">
     <p class="kicker">Вся программа</p>
@@ -545,10 +545,10 @@ body.touring main{padding-bottom:150px}
   <div class="wk-panel" id="wk-panel" aria-live="polite"></div>
   <p class="src" style="margin-top:10px">Неделю спринта начинай в понедельник, аудио дня слушай в свой день. Теорию можно растянуть до трёх недель (<a data-l="0.2">урок 0.2</a>).</p>
 </section>
-
+<!--@endif-->
 <!-- ================= ICEBERG ================= -->
 <section class="scene" id="iceberg" data-stepper="iceberg">
-  <div class="scene-head"><p class="kicker">Урок 0.1 · основа метода</p><h2>Айсберг: три слоя</h2><p class="muted">Главная картинка курса. Всё остальное раскладывается по её слоям.</p></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 0.1 · основа метода</p><!--@endif--><!--@if share--><p class="kicker">Основа метода</p><!--@endif--><h2>Айсберг: три слоя</h2><p class="muted">Главная картинка метода. Всё остальное раскладывается по её слоям.</p></div>
   <div class="player">
     <div class="stage">
       <svg viewBox="0 0 360 312" role="img" aria-label="Айсберг из трёх слоёв">
@@ -563,9 +563,9 @@ body.touring main{padding-bottom:150px}
           <path data-s="4" class="drawable" pathLength="1" d="M128,290 L148,264 L138,250 L162,230 L154,214 L174,198" style="fill:none;stroke:var(--z7);stroke-width:3.5;stroke-linejoin:round"/>
         </g>
         <text x="214" y="46" class="tb">Результат</text>
-        <text data-s="1" x="356" y="104" text-anchor="end" class="tm">нед. 1</text>
-        <text data-s="2" x="356" y="158" text-anchor="end" class="tm">нед. 4–5</text>
-        <text data-s="3" x="356" y="240" text-anchor="end" class="tm">нед. 2–3</text>
+        <!--@if personal--><text data-s="1" x="356" y="104" text-anchor="end" class="tm">нед. 1</text><!--@endif-->
+        <!--@if personal--><text data-s="2" x="356" y="158" text-anchor="end" class="tm">нед. 4–5</text><!--@endif-->
+        <!--@if personal--><text data-s="3" x="356" y="240" text-anchor="end" class="tm">нед. 2–3</text><!--@endif-->
         <g data-s="5">
           <path class="drawable" pathLength="1" d="M38,272 L38,104" style="stroke:var(--accent);stroke-width:3.5;fill:none" marker-end="url(#arrA)"/>
           <text x="46" y="266" class="ts">1</text><text x="46" y="162" class="ts">2</text><text x="46" y="118" class="ts">3</text>
@@ -583,27 +583,27 @@ body.touring main{padding-bottom:150px}
   <div class="steps">
     <ol class="step-list">
       <li><button class="sb" type="button"><b>Видно только результат</b><span>Над водой верхушка: результаты. Обычные системы целей и тайм-менеджмент работают только с ней.</span></button></li>
-      <li><button class="sb" type="button"><b>Результат держится на действиях</b><span>Что ты делаешь день за днём. Этот слой курс разбирает в неделю 1.</span></button></li>
-      <li><button class="sb" type="button"><b>Действия держатся на мышлении</b><span>Как ты толкуешь события и какой сценарий выбираешь. Это недели 4–5.</span></button></li>
-      <li><button class="sb" type="button"><b>Мышление держится на состоянии</b><span>Насколько возбуждена или заторможена психика прямо сейчас. Это недели 2–3.</span></button></li>
+      <li><button class="sb" type="button"><b>Результат держится на действиях</b><span>Что ты делаешь день за днём.<!--@if personal--> Этот слой курс разбирает в неделю 1.<!--@endif--></span></button></li>
+      <li><button class="sb" type="button"><b>Действия держатся на мышлении</b><span>Как ты толкуешь события и какой сценарий выбираешь.<!--@if personal--> Это недели 4–5.<!--@endif--></span></button></li>
+      <li><button class="sb" type="button"><b>Мышление держится на состоянии</b><span>Насколько возбуждена или заторможена психика прямо сейчас.<!--@if personal--> Это недели 2–3.<!--@endif--></span></button></li>
       <li><button class="sb" type="button"><b>Трещина внизу качает всё</b><span>В стрессе и выгорании голове не хватает ресурса. Даже работа с мыслями тогда не идёт.</span></button></li>
       <li><button class="sb" type="button"><b>Поэтому при сбое иди снизу вверх</b><span>Сначала состояние, потом мышление, потом действия. <i class="vyvod">[вывод]</i></span></button></li>
     </ol>
-    <p class="src">Источник: <a data-l="0.1">урок 0.1</a>.</p>
+    <!--@if personal--><p class="src">Источник: <a data-l="0.1">урок 0.1</a>.</p><!--@endif-->
   </div>
 </section>
 
-<!-- ================= ACTIONS ================= -->
+<!--@move:actions--><!-- ================= ACTIONS ================= -->
 <section class="part" id="actions">
   <div class="part-head">
-    <p class="kicker">Неделя 1 программы · верхний слой</p>
+    <p class="kicker"><!--@if personal-->Неделя 1 программы · верхний слой<!--@endif--><!--@if share-->Верхний слой айсберга<!--@endif--></p>
     <h2>Действия: менять жизнь маленькими порциями</h2>
     <p class="lede muted">Почему большие планы откатываются, как общаются нейроны, какие три проекта брать и как закрепить прогресс.</p>
   </div>
 </section>
 
 <section class="scene" id="homeo" data-stepper="homeo">
-  <div class="scene-head"><p class="kicker">Урок 1.2</p><h3>Почему большие перемены откатываются</h3></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 1.2</p><!--@endif--><h3>Почему большие перемены откатываются</h3></div>
   <div class="player">
     <div class="stage">
       <svg viewBox="0 0 360 250" role="img" aria-label="Шарик в ямке: гомеостаз, правило 10/90, ремонт по комнатам">
@@ -650,14 +650,14 @@ body.touring main{padding-bottom:150px}
       <label class="small" for="g10-range">Месяцев: <b id="g10-m" class="num">0</b></label>
       <input id="g10-range" type="range" min="0" max="24" value="0">
       <div class="row"><button class="btn primary" type="button" id="g10-play">▶ Прокрутить 2 года</button><button class="btn" type="button" data-m="12">год</button></div>
-      <p class="note">На слайде урока через 3 месяца закрашено 27 клеток, через полгода 47, через год 72, через два года 92. Так и выходит, если каждый месяц менять 10% того, что ещё не изменено. <i class="vyvod">[вывод]</i></p>
+      <p class="note"><!--@if personal-->На слайде урока через 3 месяца закрашено 27 клеток, через полгода 47, через год 72, через два года 92. Так и выходит,<!--@endif--><!--@if share-->Через 3 месяца изменено 27% жизни, через полгода 47%, через год 72%, через два года 92%. Так и выходит,<!--@endif--> если каждый месяц менять 10% того, что ещё не изменено. <i class="vyvod">[вывод]</i></p>
     </div>
-    <p class="src">Источник: <a data-l="1.2">урок 1.2</a>.</p>
+    <!--@if personal--><p class="src">Источник: <a data-l="1.2">урок 1.2</a>.</p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="neuron" data-stepper="neuron">
-  <div class="scene-head"><p class="kicker">Урок 1.3</p><h3>Как общаются нейроны</h3><p class="muted">Без этой сцены непонятно, почему Драйв и Кайф надо чередовать.</p></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 1.3</p><!--@endif--><h3>Как общаются нейроны</h3><p class="muted">Без этой сцены непонятно, почему Драйв и Кайф надо чередовать.</p></div>
   <div class="player">
     <div class="stage">
       <svg viewBox="0 0 360 252" role="img" aria-label="Два нейрона и синапс между ними">
@@ -707,12 +707,12 @@ body.touring main{padding-bottom:150px}
       <li><button class="sb" type="button"><b>Вместе активируются — вместе связываются</b><span>Связь, которой пользуются часто, крепнет. Неиспользуемые связи отмирают. Так пластичность меняет нас всю жизнь.</span></button></li>
       <li><button class="sb" type="button"><b>Рецепторы — как вкус на языке</b><span>Много острого подряд — и вкус притупляется. Так же долгая однотипная активация снижает чувствительность рецепторов.</span></button></li>
     </ol>
-    <p class="src">Источник: <a data-l="1.3">урок 1.3</a>. <a class="sci" href="#science">наука?</a></p>
+    <!--@if personal--><p class="src">Источник: <a data-l="1.3">урок 1.3</a>. <a class="sci" href="#science">наука?</a></p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="gasbrake" style="grid-template-columns:1fr">
-  <div class="scene-head"><p class="kicker">Урок 1.3 · тренажёр</p><h3>Газ и тормоз: зачем чередовать Драйв и Кайф</h3>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 1.3 · тренажёр</p><!--@endif--><!--@if share--><p class="kicker">Тренажёр</p><!--@endif--><h3>Газ и тормоз: зачем чередовать Драйв и Кайф</h3>
     <p class="muted">Дофамин говорит «ещё!» и толкает к переменам. Серотонин говорит «достаточно» и даёт удовлетворение. Разом их не нажать. Выбери режим и посмотри на рецепторы.</p></div>
   <div class="card" style="max-width:720px">
     <div class="row" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px">
@@ -724,13 +724,13 @@ body.touring main{padding-bottom:150px}
     <div class="meter"><div class="meter-h"><span>Рецепторы дофамина <span class="muted">(драйв, мотивация)</span></span><b class="num" id="gb-dv">100</b></div><div class="rec" id="gb-dr" style="--c:var(--d)"></div></div>
     <div class="meter"><div class="meter-h"><span>Рецепторы серотонина <span class="muted">(кайф, удовольствие)</span></span><b class="num" id="gb-kv">100</b></div><div class="rec" id="gb-kr" style="--c:var(--k)"></div></div>
     <p class="caption" id="gb-cap" aria-live="polite">Нажми режим — пойдут 12 отрезков времени.</p>
-    <p class="note">Игрушечная модель: числа условные, она показывает только направление. По курсу Драйв подряд притупляет мотивацию, Кайф подряд — удовольствие, а чередование возвращает чувствительность.</p>
-    <p class="src">Источник: <a data-l="1.3">урок 1.3</a>. <a class="sci" href="#science">наука?</a></p>
+    <p class="note">Игрушечная модель: числа условные, она показывает только направление. По методу Драйв подряд притупляет мотивацию, Кайф подряд — удовольствие, а чередование возвращает чувствительность.</p>
+    <!--@if personal--><p class="src">Источник: <a data-l="1.3">урок 1.3</a>. <a class="sci" href="#science">наука?</a></p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="sprint" data-stepper="sprint">
-  <div class="scene-head"><p class="kicker">Уроки 1.4, 1.5, 2.9</p><h3>Нейроспринт: 3 недели · 3 проекта · 30 часов</h3></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Уроки 1.4, 1.5, 2.9</p><!--@endif--><h3>Нейроспринт: 3 недели · 3 проекта · 30 часов</h3></div>
   <div class="player">
     <div class="stage">
       <svg viewBox="0 0 360 310" role="img" aria-label="Схема спринта и бюджет 30 часов">
@@ -776,23 +776,23 @@ body.touring main{padding-bottom:150px}
       <li><button class="sb" type="button"><b>Если состояние проседает</b><span>Тест НейроБаланс показал меньше 80% интеграции? Фундамент растёт до 15–20 часов, Драйв и Кайф сжимаются до 5–7 часов.</span></button></li>
       <li><button class="sb" type="button"><b>Год из кирпичиков</b><span>12 спринтов по 3 проекта — 36 проектов в год.</span></button></li>
     </ol>
-    <p class="src">Источник: <a data-l="1.4">урок 1.4</a>, <a data-l="1.5">1.5</a>, <a data-l="2.9">2.9</a>, <a data-l="2.10">2.10</a>.</p>
+    <!--@if personal--><p class="src">Источник: <a data-l="1.4">урок 1.4</a>, <a data-l="1.5">1.5</a>, <a data-l="2.9">2.9</a>, <a data-l="2.10">2.10</a>.</p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="sort" style="grid-template-columns:1fr">
-  <div class="scene-head"><p class="kicker">Урок 1.5 · квиз</p><h3>Разложи по проектам</h3><p class="muted">Прочитай три правила и проверь себя на 12 примерах.</p></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 1.5 · квиз</p><!--@endif--><!--@if share--><p class="kicker">Квиз</p><!--@endif--><h3>Разложи по проектам</h3><p class="muted">Прочитай три правила и проверь себя на 12 примерах.</p></div>
   <div class="rules3">
     <div class="rule" style="--c:var(--f)"><b>Ф — Фундамент</b><p>Простые шаги для здоровья: сон, движение, питание, стресс. Сон — первым. Не сюда: спорт высоких достижений, самолечение, БАДы без врача.</p></div>
     <div class="rule" style="--c:var(--d)"><b>Д — Драйв</b><p>Новое и лично важное: карьера, личный рост, круг общения. Не сюда: рутина и «так принято», если тебе всё равно.</p></div>
     <div class="rule" style="--c:var(--k)"><b>К — Кайф</b><p>Удовольствие ради процесса, с вниманием: ощущения, люди, игра. Не сюда: соцсети, сериалы запоем, жирная еда, алкоголь.</p></div>
   </div>
   <div class="deck" id="deck-sort"></div>
-  <p class="note">Одно и то же дело бывает Кайфом для одного и вызовом для другого. Смотри на себя, а не на ярлык. Источник: <a data-l="1.5">урок 1.5</a>.</p>
+  <p class="note">Одно и то же дело бывает Кайфом для одного и вызовом для другого. Смотри на себя, а не на ярлык.<!--@if personal--> Источник: <a data-l="1.5">урок 1.5</a>.<!--@endif--></p>
 </section>
 
 <section class="scene" id="plan" data-stepper="plan">
-  <div class="scene-head"><p class="kicker">Урок 1.6</p><h3>От проекта к календарю</h3></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 1.6</p><!--@endif--><h3>От проекта к календарю</h3></div>
   <div class="player">
     <div class="stage">
       <svg viewBox="0 0 360 270" role="img" aria-label="Проект делится на задачи, считается время, задачи встают в календарь">
@@ -822,12 +822,12 @@ body.touring main{padding-bottom:150px}
       <li><button class="sb" type="button"><b>Каждой задаче — слот в календаре</b><span>В том календаре, который смотришь чаще всего. Слот можно сдвинуть.</span></button></li>
     </ol>
 <!--@slot:planNote--><!--@endslot-->
-    <p class="src">Источник: <a data-l="1.6">урок 1.6</a>, протокол <a data-p="Планирование спринта">«Планирование спринта»</a>. <a class="sci" href="#science">наука?</a></p>
+    <!--@if personal--><p class="src">Источник: <a data-l="1.6">урок 1.6</a>, протокол <a data-p="Планирование спринта">«Планирование спринта»</a>. <a class="sci" href="#science">наука?</a></p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="refl" data-stepper="refl">
-  <div class="scene-head"><p class="kicker">Урок 1.7</p><h3>Три рефлексии: как закрепить хорошее</h3></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 1.7</p><!--@endif--><h3>Три рефлексии: как закрепить хорошее</h3></div>
   <div class="player">
     <div class="stage">
       <svg viewBox="0 0 360 266" role="img" aria-label="Мозг цепляется за плохое; три рефлексии в календаре спринта">
@@ -862,34 +862,35 @@ body.touring main{padding-bottom:150px}
       <li><button class="sb" type="button"><b>Трансформирующая — 30 минут раз в месяц</b><span>На неделе интеграции. Она смотрит не на задачи, а на то, каким ты стал.</span></button></li>
       <li><button class="sb" type="button"><b>Около 3,5 часа за спринт</b><span>Это сверх 30 часов на проекты. Делай в приятной обстановке, в одно время.</span></button></li>
     </ol>
-    <p class="src">Источник: <a data-l="1.7">урок 1.7</a>, протоколы <a data-p="Ежедневный стендап">стендап</a>, <a data-p="Недельная рефлексия">недельная</a>, <a data-p="Трансформирующая рефлексия">трансформирующая</a>.</p>
+    <!--@if personal--><p class="src">Источник: <a data-l="1.7">урок 1.7</a>, протоколы <a data-p="Ежедневный стендап">стендап</a>, <a data-p="Недельная рефлексия">недельная</a>, <a data-p="Трансформирующая рефлексия">трансформирующая</a>.</p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="trail" style="grid-template-columns:1fr">
-  <div class="scene-head"><p class="kicker">Уроки 1.7, 4.2 · тренажёр</p><h3>Протопчи дорожку</h3><p class="muted">В детстве по дорожке достаточно пройти один раз. Взрослому нужно больше повторений. Жми «Пройти» и смотри, как появляется дорожка.</p></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Уроки 1.7, 4.2 · тренажёр</p><!--@endif--><!--@if share--><p class="kicker">Тренажёр</p><!--@endif--><h3>Протопчи дорожку</h3><p class="muted">В детстве по дорожке достаточно пройти один раз. Взрослому нужно больше повторений. Жми «Пройти» и смотри, как появляется дорожка.</p></div>
   <div class="card" style="max-width:720px">
     <div class="row" style="display:grid;grid-template-columns:1fr 1fr;gap:6px"><button class="btn" type="button" id="tr-kid" aria-pressed="false">Ребёнок</button><button class="btn on" type="button" id="tr-adult" aria-pressed="true">Взрослый</button></div>
     <svg id="tr-svg" viewBox="0 0 360 150" role="img" aria-label="Поле, на котором с каждым проходом проступает дорожка" style="width:100%;height:auto;display:block;border-radius:12px"></svg>
     <div class="row"><button class="btn primary" type="button" id="tr-go" style="flex:1">Пройти по дорожке</button><button class="btn" type="button" id="tr-reset">Сначала</button></div>
     <p class="caption" id="tr-cap" aria-live="polite">Проходов: 0.</p>
-    <p class="note">Число проходов для взрослого условное. Курс говорит качественно: с возрастом нужно больше повторений, а для новой связи — фокус и повтор.</p>
-    <p class="src">Источник: <a data-l="4.2">урок 4.2</a>, <a data-l="1.7">урок 1.7</a>. <a class="sci" href="#science">наука?</a></p>
+    <p class="note">Число проходов для взрослого условное. Метод говорит качественно: с возрастом нужно больше повторений, а для новой связи — фокус и повтор.</p>
+    <!--@if personal--><p class="src">Источник: <a data-l="4.2">урок 4.2</a>, <a data-l="1.7">урок 1.7</a>. <a class="sci" href="#science">наука?</a></p><!--@endif-->
   </div>
 </section>
 
-<!-- ================= STATE ================= -->
+<!--@endmove--><!-- ================= STATE ================= -->
 <section class="part" id="state">
   <div class="part-head">
-    <p class="kicker">Недели 2–3 программы · нижний слой</p>
+    <p class="kicker"><!--@if personal-->Недели 2–3 программы · нижний слой<!--@endif--><!--@if share-->Нижний слой айсберга<!--@endif--></p>
     <h2>Состояние: стресс, шкала и SANE</h2>
     <p class="lede muted">Откуда берётся перегруз, что происходит в теле, как это видно на шкале и как вернуться в зону, где хорошо думается.</p>
   </div>
 </section>
 
+<!--@put:scale-->
 <section class="scene" id="prism-scene">
-  <div class="scene-head"><p class="kicker">Урок 2.1 · тренажёр</p><h3>Стресс — это нормально. Перегружает PRISM</h3>
-    <p class="muted">Стресс — нормальная реакция на любые перемены, даже хорошие. Нет реакции совсем — плохой знак. Тяжело, когда психику постоянно давят пять факторов. По курсу к выгоранию ведут они, а не объём работы. <a class="sci" href="#science">наука?</a></p></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 2.1 · тренажёр</p><!--@endif--><!--@if share--><p class="kicker">Тренажёр</p><!--@endif--><h3>Стресс — это нормально. Перегружает PRISM</h3>
+    <p class="muted">Стресс — нормальная реакция на любые перемены, даже хорошие. Нет реакции совсем — плохой знак. Тяжело, когда психику постоянно давят пять факторов. По методу к выгоранию ведут они, а не объём работы.<!--@if personal--> <a class="sci" href="#science">наука?</a><!--@endif--></p></div>
   <div class="player">
     <svg id="pr-radar" viewBox="0 0 360 270" role="img" aria-label="Пятиугольник факторов PRISM" style="width:100%;height:auto;display:block;max-width:420px;margin:0 auto"></svg>
     <div class="col" style="padding:0 6px">
@@ -911,13 +912,13 @@ body.touring main{padding-bottom:150px}
       <div class="pr-row"><span class="ltr">S</span><label for="pr-s">Нет живого контакта с людьми</label><input id="pr-s" type="range" min="0" max="4" value="2"></div>
       <div class="pr-row"><span class="ltr">M</span><label for="pr-m">Действия против своих ценностей</label><input id="pr-m" type="range" min="0" max="4" value="2"></div>
     </div>
-    <p class="note">Урок даёт одно действие: ответить себе, какие из пяти факторов есть в твоей жизни сейчас.</p>
-    <p class="src">Источник: <a data-l="2.1">урок 2.1</a>.</p>
+    <p class="note"><!--@if personal-->Урок даёт одно действие: ответить себе, какие из пяти факторов есть в твоей жизни сейчас.<!--@endif--><!--@if share-->Одно действие на сейчас: ответь себе, какие из пяти факторов есть в твоей жизни.<!--@endif--></p>
+    <!--@if personal--><p class="src">Источник: <a data-l="2.1">урок 2.1</a>.</p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="body" data-stepper="body">
-  <div class="scene-head"><p class="kicker">Урок 2.2</p><h3>Что происходит в теле при стрессе</h3></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 2.2</p><!--@endif--><h3>Что происходит в теле при стрессе</h3></div>
   <div class="player">
     <div class="stage">
       <svg viewBox="0 0 360 300" role="img" aria-label="Цепочка стресс-реакции от амигдалы до надпочечников">
@@ -960,12 +961,12 @@ body.touring main{padding-bottom:150px}
       <li><button class="sb" type="button"><b>Адреналин и кортизол</b><span>Надпочечники выделяют оба гормона. Адреналин включается за доли секунды, кортизол — за несколько минут.</span></button></li>
       <li><button class="sb" type="button"><b>Восстановление — ключевой этап</b><span>Триггер ушёл. Адреналин уходит примерно за 10 минут, кортизол — за 3–6 часов. Полный цикл: триггер, реакция и восстановление.</span></button></li>
     </ol>
-    <p class="src">Источник: <a data-l="2.2">урок 2.2</a>. <a class="sci" href="#science">наука?</a></p>
+    <!--@if personal--><p class="src">Источник: <a data-l="2.2">урок 2.2</a>. <a class="sci" href="#science">наука?</a></p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="cort" data-stepper="cort">
-  <div class="scene-head"><p class="kicker">Уроки 2.2, 2.7 · тренажёр</p><h3>Нисходящая спираль стресса</h3></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Уроки 2.2, 2.7 · тренажёр</p><!--@endif--><!--@if share--><p class="kicker">Тренажёр</p><!--@endif--><h3>Нисходящая спираль стресса</h3></div>
   <div class="player">
     <div class="stage">
       <svg id="cort-svg" viewBox="0 0 360 230" role="img" aria-label="График кортизола во времени"></svg>
@@ -990,12 +991,12 @@ body.touring main{padding-bottom:150px}
       </div>
       <p class="small muted" id="cort-msg" aria-live="polite">Схема для понимания: форма волн условная.</p>
     </div>
-    <p class="src">Источник: <a data-l="2.2">урок 2.2</a>, <a data-l="2.7">урок 2.7</a>. <a class="sci" href="#science">наука?</a></p>
+    <!--@if personal--><p class="src">Источник: <a data-l="2.2">урок 2.2</a>, <a data-l="2.7">урок 2.7</a>. <a class="sci" href="#science">наука?</a></p><!--@endif-->
   </div>
 </section>
 
-<section class="scene" id="scale" style="grid-template-columns:1fr">
-  <div class="scene-head"><p class="kicker">Уроки 2.3, 3.2 · главный инструмент курса</p><h3>Шкала НейроБаланса: семь зон</h3>
+<!--@move:scale--><section class="scene" id="scale" style="grid-template-columns:1fr">
+  <div class="scene-head"><!--@if personal--><p class="kicker">Уроки 2.3, 3.2 · главный инструмент метода</p><!--@endif--><!--@if share--><p class="kicker">Главный инструмент метода</p><!--@endif--><h3>Шкала НейроБаланса: семь зон</h3>
     <p class="muted">Шкала показывает, насколько возбуждена или заторможена психика сейчас. Эмоции и физическую энергию она не меряет. Цель — не застыть в зелёном, а быстрее возвращаться в интеграцию. Нажми на зону.</p></div>
   <div class="card">
     <div class="nb-wrap"><div class="nb-ptr" id="nb-ptr" aria-hidden="true"></div><div class="nb-segs" id="nb-segs" role="group" aria-label="Зоны шкалы"></div></div>
@@ -1008,14 +1009,14 @@ body.touring main{padding-bottom:150px}
   </div>
   <div class="card nb-panel" id="nb-panel" aria-live="polite"></div>
   <div class="two">
-    <div class="card"><b>Тест НейроБаланс</b><p class="small">18 вопросов о последних двух неделях. На выходе три процента: выгорание, интеграция, дистресс. Это динамика, а не диагноз. Проходят до спринта и после. В интеграции меньше 70–80% — усиливай работу с состоянием и Фундамент.</p><p class="src">Протокол <a data-p="Тест НейроБаланс">«Тест НейроБаланс»</a>, <a data-l="2.3">урок 2.3</a>.</p></div>
-    <div class="card"><b>Замер каждый день</b><p class="small">Три спокойных вдоха. Потом два шага: широкая зона, затем подзона. Каждый день примерно в один час, лучше утром — тогда сразу правишь план дня.</p><p class="src">Протокол <a data-p="Замер ШНБ">«Замер ШНБ»</a>, <a data-l="2.5">урок 2.5</a>.</p></div>
+    <div class="card"><b>Тест НейроБаланс</b><p class="small">18 вопросов о последних двух неделях. На выходе три процента: выгорание, интеграция, дистресс. Это динамика, а не диагноз. Проходят до спринта и после. В интеграции меньше 70–80% — усиливай работу с состоянием и Фундамент: сон, движение, питание.</p><!--@if personal--><p class="src">Протокол <a data-p="Тест НейроБаланс">«Тест НейроБаланс»</a>, <a data-l="2.3">урок 2.3</a>.</p><!--@endif--></div>
+    <div class="card"><b>Замер каждый день</b><p class="small">Три спокойных вдоха. Потом два шага: широкая зона, затем подзона. Каждый день примерно в один час, лучше утром — тогда сразу правишь план дня.</p><!--@if personal--><p class="src">Протокол <a data-p="Замер ШНБ">«Замер ШНБ»</a>, <a data-l="2.5">урок 2.5</a>.</p><!--@endif--></div>
   </div>
-  <p class="src">Источник: <a data-l="2.3">урок 2.3</a>, <a data-l="3.2">урок 3.2</a>, протокол <a data-p="План дня по зоне">«План дня по зоне»</a>.</p>
+  <!--@if personal--><p class="src">Источник: <a data-l="2.3">урок 2.3</a>, <a data-l="3.2">урок 3.2</a>, протокол <a data-p="План дня по зоне">«План дня по зоне»</a>.</p><!--@endif-->
 </section>
 
-<section class="scene" id="sane" data-stepper="sane">
-  <div class="scene-head"><p class="kicker">Уроки 2.4–2.8</p><h3>SANE: четыре страховки от спирали</h3></div>
+<!--@endmove--><section class="scene" id="sane" data-stepper="sane">
+  <div class="scene-head"><!--@if personal--><p class="kicker">Уроки 2.4–2.8</p><!--@endif--><h3>SANE: четыре страховки от спирали</h3></div>
   <div class="player">
     <div class="stage">
       <svg viewBox="0 0 360 240" role="img" aria-label="Волна стресса и четыре шага SANE">
@@ -1047,12 +1048,12 @@ body.touring main{padding-bottom:150px}
       <li><button class="sb" type="button"><b>E — Enhance: укрепить систему</b><span>Между эпизодами. Сон: один режим, отбой до 23:00, темнота, 16–19 °C, кофеин до 14:00. Островки предсказуемости, digital detox. Холод и сауна — только после врача.</span></button></li>
     </ol>
     <p class="note">Острый эпизод идёт по порядку S → A → N. Шаг E в него не входит: он укрепляет систему между эпизодами.</p>
-    <p class="src">Источник: <a data-l="2.4">урок 2.4</a>, <a data-l="2.5">2.5</a>, <a data-l="2.6">2.6</a>, <a data-l="2.7">2.7</a>, <a data-l="2.8">2.8</a>, протокол <a data-p="SANE (острое состояние)">«SANE»</a>. <a class="sci" href="#science">наука?</a></p>
+    <!--@if personal--><p class="src">Источник: <a data-l="2.4">урок 2.4</a>, <a data-l="2.5">2.5</a>, <a data-l="2.6">2.6</a>, <a data-l="2.7">2.7</a>, <a data-l="2.8">2.8</a>, протокол <a data-p="SANE (острое состояние)">«SANE»</a>. <a class="sci" href="#science">наука?</a></p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="breathing" style="grid-template-columns:1fr">
-  <div class="scene-head"><p class="kicker">Урок 2.6 · попробуй сейчас</p><h3>Выдох длиннее вдоха</h3><p class="muted">Телесный путь. Работает и в красной, и в фиолетовой зоне, где голова почти не помогает.</p></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 2.6 · попробуй сейчас</p><!--@endif--><!--@if share--><p class="kicker">Попробуй сейчас</p><!--@endif--><h3>Выдох длиннее вдоха</h3><p class="muted">Телесный путь. Работает и в красной, и в фиолетовой зоне, где голова почти не помогает.</p></div>
   <div class="card" style="max-width:560px;justify-self:center;width:100%">
     <div class="breath">
       <div class="bwrap">
@@ -1066,12 +1067,12 @@ body.touring main{padding-bottom:150px}
       </div>
       <p class="small muted" style="text-align:center;max-width:42ch">Вдох 4 счёта. Выдох плавно через рот, как через трубочку. Без задержек. Удобно только до 6–7 — оставайся там. Один цикл — один палец, 10 пальцев — около 2 минут.</p>
     </div>
-    <p class="src">Источник: <a data-l="2.6">урок 2.6</a>, практики <a data-pr="Практика 01 — Базовое дыхание на пальцах">01</a>, <a data-pr="Практика 02 — Базовое дыхание со счётом">02</a>. <a class="sci" href="#science">наука?</a></p>
+    <!--@if personal--><p class="src">Источник: <a data-l="2.6">урок 2.6</a>, практики <a data-pr="Практика 01 — Базовое дыхание на пальцах">01</a>, <a data-pr="Практика 02 — Базовое дыхание со счётом">02</a>. <a class="sci" href="#science">наука?</a></p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="phrase" data-stepper="phrase">
-  <div class="scene-head"><p class="kicker">Урок 2.6</p><h3>Фраза-интеграция: путь через голову</h3><p class="muted">Делай её, когда тело уже снизило накал. В красной и фиолетовой зонах курс её не советует.</p></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 2.6</p><!--@endif--><h3>Фраза-интеграция: путь через голову</h3><p class="muted">Делай её, когда тело уже снизило накал. В красной и фиолетовой зонах метод её не советует.</p></div>
   <div class="player">
     <div class="stage">
       <svg viewBox="0 0 360 220" role="img" aria-label="Четыре шага фразы-интеграции">
@@ -1113,12 +1114,12 @@ body.touring main{padding-bottom:150px}
       <li><button class="sb" type="button"><b>OPEN — открытость переменам</b><span>Раскрываешь руки, как паруса. Превращаешь опасение в предвкушение.</span></button></li>
     </ol>
     <p class="note">Форматы: экспресс — один цикл дыхания на шаг; средний — по минуте; глубокий — по 3 минуты.</p>
-    <p class="src">Источник: <a data-l="2.6">урок 2.6</a>, практики <a data-pr="Практика 06 — Фраза-интеграция (экспресс)">06</a>, <a data-pr="Практика 07 — Фраза-интеграция (полная)">07</a>.</p>
+    <!--@if personal--><p class="src">Источник: <a data-l="2.6">урок 2.6</a>, практики <a data-pr="Практика 06 — Фраза-интеграция (экспресс)">06</a>, <a data-pr="Практика 07 — Фраза-интеграция (полная)">07</a>.</p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="battery">
-  <div class="scene-head"><p class="kicker">Урок 3.1</p><h3>Батарейка и стрелка — не одно и то же</h3>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 3.1</p><!--@endif--><h3>Батарейка и стрелка — не одно и то же</h3>
     <p class="muted">Физическая энергия — как батарейка, от 0 до 100%: её разряжают недосып, голод и перегрузка. Психическая активация — стрелка на шкале: её враг — долгий стресс без восстановления. Усталость легко спутать с синей зоной.</p></div>
   <div class="player">
     <svg viewBox="0 0 360 200" role="img" aria-label="Батарейка физической энергии и стрелка шкалы" style="width:100%;height:auto;display:block;max-width:480px;margin:0 auto">
@@ -1142,13 +1143,13 @@ body.touring main{padding-bottom:150px}
       <button class="btn" type="button" data-bat="blue">…только конкретные дела, которые вызывают сопротивление</button>
       <button class="btn" type="button" data-bat="ok">Всё нормально, хочется действовать</button>
     </div>
-    <p class="bat-out" id="bat-out" aria-live="polite">Выбери вариант — это «лакмусовая бумажка» курса.</p>
-    <p class="src">Источник: <a data-l="3.1">урок 3.1</a>, протокол <a data-p="План дня по зоне">«План дня по зоне»</a>.</p>
+    <p class="bat-out" id="bat-out" aria-live="polite">Выбери вариант — это «лакмусовая бумажка» метода.</p>
+    <!--@if personal--><p class="src">Источник: <a data-l="3.1">урок 3.1</a>, протокол <a data-p="План дня по зоне">«План дня по зоне»</a>.</p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="day" style="grid-template-columns:1fr">
-  <div class="scene-head"><p class="kicker">Уроки 3.2, 3.3 · тренажёр</p><h3>День по кортизолу</h3><p class="muted">Утром кортизол выше, вечером ниже. Двигай время и смотри, что подходит. Колебания по шкале за день — норма.</p></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Уроки 3.2, 3.3 · тренажёр</p><!--@endif--><!--@if share--><p class="kicker">Тренажёр</p><!--@endif--><h3>День по кортизолу</h3><p class="muted">Утром кортизол выше, вечером ниже. Двигай время и смотри, что подходит. Колебания по шкале за день — норма.</p></div>
   <div class="card" style="max-width:720px">
     <svg id="day-svg" viewBox="0 0 360 190" role="img" aria-label="Кривая кортизола за день с курсором времени" style="width:100%;height:auto;display:block">
       <line x1="20" y1="152" x2="340" y2="152" class="ink" stroke-width="1.2"/>
@@ -1169,22 +1170,22 @@ body.touring main{padding-bottom:150px}
       <div class="tool"><b>2 · Приоритеты</b>Раз в неделю после рефлексии: чистка и пул задач на неделю.</div>
       <div class="tool"><b>3 · Бронь</b>Время в календаре. Каждый день — три приоритета.</div>
     </div>
-    <p class="src">Источник: <a data-l="3.2">урок 3.2</a>, <a data-l="3.3">урок 3.3</a>. <a class="sci" href="#science">наука?</a></p>
+    <!--@if personal--><p class="src">Источник: <a data-l="3.2">урок 3.2</a>, <a data-l="3.3">урок 3.3</a>. <a class="sci" href="#science">наука?</a></p><!--@endif-->
   </div>
 </section>
 
 <!-- ================= THINKING ================= -->
 <section class="part" id="thinking">
   <div class="part-head">
-    <p class="kicker">Недели 4–5 программы · средний слой</p>
+    <p class="kicker"><!--@if personal-->Недели 4–5 программы · средний слой<!--@endif--><!--@if share-->Средний слой айсберга<!--@endif--></p>
     <h2>Мышление: заметить автопилот и выбрать маршрут</h2>
     <p class="lede muted">Как мозг толкует события, какие три привычных сценария он включает и как найти новые варианты.</p>
   </div>
 </section>
 
 <section class="scene" id="modes" data-stepper="modes">
-  <div class="scene-head"><p class="kicker">Урок 4.1</p><h3>Быстрый и Медленный режимы</h3>
-    <p class="muted">Быстрый режим ведёт амигдала: работает сам, быстро, по прошлому опыту, но неточно. Медленный ведёт префронтальная кора (ПФК): требует усилия, работает медленно, но точно и умеет найти новое. <a class="sci" href="#science">наука?</a></p></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 4.1</p><!--@endif--><h3>Быстрый и Медленный режимы</h3>
+    <p class="muted">Быстрый режим ведёт амигдала: работает сам, быстро, по прошлому опыту, но неточно. Медленный ведёт префронтальная кора (ПФК): требует усилия, работает медленно, но точно и умеет найти новое.<!--@if personal--> <a class="sci" href="#science">наука?</a><!--@endif--></p></div>
   <div class="player">
     <div class="row" style="display:grid;grid-template-columns:auto 1fr 1fr;gap:6px;align-items:center"><span class="small muted">Состояние:</span><button class="btn on" type="button" id="m-int" aria-pressed="true">интеграция</button><button class="btn" type="button" id="m-off" aria-pressed="false">дистресс</button></div>
     <div class="stage" id="modes-stage">
@@ -1211,12 +1212,12 @@ body.touring main{padding-bottom:150px}
       <li><button class="sb" type="button"><b>Медленный режим перепроверяет</b><span>Был и хороший опыт. Риски можно снизить. Неудача не принесёт серьёзных проблем.</span></button></li>
       <li><button class="sb" type="button"><b>Решение: можно действовать</b><span>Ты правишь резюме. Переключи «дистресс» вверху: шаги 4–5 доступны только в зоне интеграции.</span></button></li>
     </ol>
-    <p class="src">Источник: <a data-l="4.1">урок 4.1</a>.</p>
+    <!--@if personal--><p class="src">Источник: <a data-l="4.1">урок 4.1</a>.</p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="orbits">
-  <div class="scene-head"><p class="kicker">Уроки 4.2, 4.3</p><h3>Три НейроОрбиты</h3>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Уроки 4.2, 4.3</p><!--@endif--><h3>Три НейроОрбиты</h3>
     <p class="muted">Орбита — привычный сценарий из прошлого опыта. Быстрый режим выбирает знакомое: для него знакомое значит безопасное. Сами орбиты нейтральны, всё решает контекст.</p></div>
   <div class="player">
     <svg viewBox="0 0 360 260" role="img" aria-label="Три орбиты вокруг ситуации" style="width:100%;height:auto;display:block;max-width:440px;margin:0 auto">
@@ -1235,17 +1236,17 @@ body.touring main{padding-bottom:150px}
     <div class="card orbit-panel" id="orb-panel" aria-live="polite"></div>
     <div class="card"><b>Как понять, что рулит орбита</b>
       <p class="small">1. Ты вне зоны интеграции. 2. В мыслях искажения: категоричность (всё чёрно-белое), долженствование («надо», «я должен»), додумывание (достраиваешь то, чего не знаешь). Нашёл искажение — решения из этого состояния не принимай. Спроси себя, уместно ли здесь игнорировать, готовиться или бороться.</p></div>
-    <p class="src">Источник: <a data-l="4.2">урок 4.2</a>, <a data-l="4.3">4.3</a>, <a data-l="4.4">4.4</a>.</p>
+    <!--@if personal--><p class="src">Источник: <a data-l="4.2">урок 4.2</a>, <a data-l="4.3">4.3</a>, <a data-l="4.4">4.4</a>.</p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="orb-quiz" style="grid-template-columns:1fr">
-  <div class="scene-head"><p class="kicker">Урок 4.2 · квиз</p><h3>Угадай орбиту</h3><p class="muted" id="orbq-sub">Девять фраз про поиск работы. Какая орбита говорит?</p></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 4.2 · квиз</p><!--@endif--><!--@if share--><p class="kicker">Квиз</p><!--@endif--><h3>Угадай орбиту</h3><p class="muted" id="orbq-sub">Девять фраз про поиск работы. Какая орбита говорит?</p></div>
   <div class="deck" id="deck-orb"></div>
 </section>
 
 <section class="scene" id="surf" data-stepper="surf">
-  <div class="scene-head"><p class="kicker">Урок 5.2</p><h3>Когнитивный сёрфинг: новый маршрут за 10 минут</h3></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 5.2</p><!--@endif--><h3>Когнитивный сёрфинг: новый маршрут за 10 минут</h3></div>
   <div class="player">
     <div class="stage" id="surf-stage">
       <svg viewBox="0 0 360 270" role="img" aria-label="Три оси вариантов: сэкономить ресурс, снизить риски, повлиять">
@@ -1279,7 +1280,7 @@ body.touring main{padding-bottom:150px}
   <div class="steps">
     <ol class="step-list">
       <li><button class="sb" type="button"><b>Сначала состояние</b><span>Сёрфинг работает только из зоны интеграции. В дистрессе и выгорании он не идёт.</span></button></li>
-      <li><button class="sb" type="button"><b>Шаг 1 · 3 минуты: опиши ситуацию</b><span>Письменно: в каком ты был состоянии, как понял события, что сделал, похоже ли на твою орбиту. Пример урока: ураган, нет света и еды, муж забирает машину. Импульс — «100% борьба».</span></button></li>
+      <li><button class="sb" type="button"><b>Шаг 1 · 3 минуты: опиши ситуацию</b><span>Письменно: в каком ты был состоянии, как понял события, что сделал, похоже ли на твою орбиту. <!--@if personal-->Пример урока: ураган<!--@endif--><!--@if share-->Пример: ураган<!--@endif-->, нет света и еды, муж забирает машину. Импульс — «100% борьба».</span></button></li>
       <li><button class="sb" type="button"><b>Шаг 2 · 3 минуты: варианты для другого человека</b><span>Представь подругу в той же ситуации. Что ей делать, если важно сэкономить ресурс? Снизить риски? Повлиять? Количество важнее качества.</span></button></li>
       <li><button class="sb" type="button"><b>Шаг 3 · 1 минута: что важно мне здесь и сейчас</b><span>Не по жизни, а в этой ситуации. Два приоритета можно, три сразу нельзя. Совпал с привычной орбитой — переспроси себя.</span></button></li>
       <li><button class="sb" type="button"><b>Шаг 4 · 3 минуты: решение</b><span>Берёшь вариант внутри круга. В примере ресурса было мало — «принять и отпустить».</span></button></li>
@@ -1290,12 +1291,12 @@ body.touring main{padding-bottom:150px}
       <p class="caption" id="surf-msg" aria-live="polite">Выбери один или два приоритета — круг на картинке сдвинется.</p>
     </div>
     <p class="note">Поначалу сёрфинг идёт задним числом, раз в неделю внутри недельной рефлексии. Так на старых граблях стоишь максимум неделю.</p>
-    <p class="src">Источник: <a data-l="5.2">урок 5.2</a>, протокол <a data-p="Орбиты и когнитивный сёрфинг">«Орбиты и сёрфинг»</a>, практика <a data-pr="Практика 09 — Когнитивный сёрфинг">09</a>.</p>
+    <!--@if personal--><p class="src">Источник: <a data-l="5.2">урок 5.2</a>, протокол <a data-p="Орбиты и когнитивный сёрфинг">«Орбиты и сёрфинг»</a>, практика <a data-pr="Практика 09 — Когнитивный сёрфинг">09</a>.</p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="focus" data-stepper="focus">
-  <div class="scene-head"><p class="kicker">Урок 5.1</p><h3>Мотивация и фокус</h3></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 5.1</p><!--@endif--><h3>Мотивация и фокус</h3></div>
   <div class="player">
     <div class="stage">
       <svg viewBox="0 0 360 224" role="img" aria-label="Весы мотивации и сцена внимания">
@@ -1319,21 +1320,22 @@ body.touring main{padding-bottom:150px}
       <li><button class="sb" type="button"><b>Значимость можно добавить руками</b><span>Приблизь награду к «сейчас». По минуте подумай, что почувствуешь, когда закончишь, и что будет, если бросишь. Ещё помогают челлендж на время, трекер и хакатон.</span></button></li>
       <li><button class="sb" type="button"><b>Фокус держит маленькая сцена</b><span>Её охраняет передняя поясная кора (ППК). Помогают зона интеграции, меньше лишних стимулов и «Растяжка для мозга» перед важной задачей.</span></button></li>
     </ol>
-    <p class="src">Источник: <a data-l="5.1">урок 5.1</a>, <a data-l="5.4">5.4</a>, практика <a data-pr="Практика 08 — Растяжка для мозга">08</a>. <a class="sci" href="#science">наука?</a></p>
+    <!--@if personal--><p class="src">Источник: <a data-l="5.1">урок 5.1</a>, <a data-l="5.4">5.4</a>, практика <a data-pr="Практика 08 — Растяжка для мозга">08</a>. <a class="sci" href="#science">наука?</a></p><!--@endif-->
   </div>
 </section>
 
+<!--@put:actions-->
 <!-- ================= CYCLE ================= -->
 <section class="part" id="cycle">
   <div class="part-head">
-    <p class="kicker">Неделя 6 программы · всё вместе</p>
+    <p class="kicker"><!--@if personal-->Неделя 6 программы · всё вместе<!--@endif--><!--@if share-->Всё вместе<!--@endif--></p>
     <h2>Цикл: спринт → интеграция → новый спринт</h2>
-    <p class="lede muted">Курс заканчивается не финишем, а ритмом. Финальная мысль курса: ты влияешь на состояние, мышление и действия — значит, ты автор своей жизни.</p>
+    <p class="lede muted"><!--@if personal-->Курс заканчивается не финишем, а ритмом. Финальная мысль курса: ты влияешь на состояние, мышление и действия — значит, ты автор своей жизни.<!--@endif--><!--@if share-->Метод работает не до финиша, а ритмом: спринт, интеграция, новый спринт. Ты влияешь на состояние, мышление и действия — значит, ты автор своей жизни.<!--@endif--></p>
   </div>
 </section>
 
 <section class="scene" id="integ" data-stepper="integ">
-  <div class="scene-head"><p class="kicker">Уроки 5.3, 6.1</p><h3>Неделя интеграции</h3></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Уроки 5.3, 6.1</p><!--@endif--><h3>Неделя интеграции</h3></div>
   <div class="player">
     <div class="stage">
       <svg viewBox="0 0 360 290" role="img" aria-label="Проекты останавливаются, четыре вопроса, три корзины">
@@ -1367,17 +1369,17 @@ body.touring main{padding-bottom:150px}
       <li><button class="sb" type="button"><b>Новый спринт</b><span>Ответ на четвёртый вопрос — вдохновение для плана. Снова 3 проекта и 30 часов.</span></button></li>
       <li><button class="sb" type="button"><b>Раз в квартал — длинная пауза</b><span>Интеграция длится две недели. Внутри — joy-пассана: от 3 часов до 3 дней без гаджетов, в приятном настоящем.</span></button></li>
     </ol>
-    <p class="src">Источник: <a data-l="5.3">урок 5.3</a>, <a data-l="6.1">6.1</a>, протоколы <a data-p="Интеграционная неделя">«Интеграционная неделя»</a>, <a data-p="Трансформирующая рефлексия">«Трансформирующая рефлексия»</a>, <a data-p="Joy-пассана">«Joy-пассана»</a>. <a class="sci" href="#science">наука?</a></p>
+    <!--@if personal--><p class="src">Источник: <a data-l="5.3">урок 5.3</a>, <a data-l="6.1">6.1</a>, протоколы <a data-p="Интеграционная неделя">«Интеграционная неделя»</a>, <a data-p="Трансформирующая рефлексия">«Трансформирующая рефлексия»</a>, <a data-p="Joy-пассана">«Joy-пассана»</a>. <a class="sci" href="#science">наука?</a></p><!--@endif-->
   </div>
 </section>
 
 <section class="scene" id="bins-quiz" style="grid-template-columns:1fr">
-  <div class="scene-head"><p class="kicker">Урок 5.3 · квиз</p><h3>В какую корзину?</h3><p class="muted">Курс даёт фразы-маркеры. По фразе реши, что делать с проектом.</p></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Урок 5.3 · квиз</p><!--@endif--><!--@if share--><p class="kicker">Квиз</p><!--@endif--><h3>В какую корзину?</h3><p class="muted">Метод даёт фразы-маркеры. По фразе реши, что делать с проектом.</p></div>
   <div class="deck" id="deck-bins"></div>
 </section>
 
 <section class="scene" id="ns2" data-stepper="ns2">
-  <div class="scene-head"><p class="kicker">Мастер-класс «НейроСпринт 2.0»</p><h3>Свежая версия: блок 90 минут каждый день</h3></div>
+  <div class="scene-head"><!--@if personal--><p class="kicker">Мастер-класс «НейроСпринт 2.0»</p><!--@endif--><!--@if share--><p class="kicker">НейроСпринт 2.0</p><!--@endif--><h3>Свежая версия: блок 90 минут каждый день</h3></div>
   <div class="player">
     <div class="stage">
       <svg viewBox="0 0 360 244" role="img" aria-label="Неделя по схеме НейроСпринт 2.0">
@@ -1395,7 +1397,7 @@ body.touring main{padding-bottom:150px}
       <li><button class="sb" type="button"><b>Воскресенье — Фундамент и рефлексия</b><span>Фундамент 60 минут и недельная рефлексия 30.</span></button></li>
     </ol>
     <p class="note">Классика: 3 недели и 30 часов. Версия 2.0: спринт 7 или 21 день, около 10 часов в неделю. Новичку и при проблемах с фокусом или стрессом — 7 дней. Стендап здесь — опция «на вырост», две рефлексии обязательны.</p>
-    <p class="src">Источник: <a data-l="МК">мастер-класс «НейроСпринт 2.0»</a>. <a class="sci" href="#science">наука?</a></p>
+    <!--@if personal--><p class="src">Источник: <a data-l="МК">мастер-класс «НейроСпринт 2.0»</a>. <a class="sci" href="#science">наука?</a></p><!--@endif-->
   </div>
 </section>
 
@@ -1407,7 +1409,7 @@ body.touring main{padding-bottom:150px}
     <p class="lede muted">Тот же айсберг, только подробно: сверху действия, в середине мышление, внизу состояние. Нажми на узел — подсветятся его связи и причины.</p>
   </div>
   <div class="graph">
-    <div class="gstage"><svg id="graph" viewBox="0 0 360 560" role="img" aria-label="Граф связей между темами курса"></svg></div>
+    <div class="gstage"><svg id="graph" viewBox="0 0 360 560" role="img" aria-label="Граф связей между темами метода"></svg></div>
     <div class="gpanel" id="gpanel" aria-live="polite"></div>
   </div>
 </section>
@@ -1415,9 +1417,9 @@ body.touring main{padding-bottom:150px}
 <!-- ================= KIT ================= -->
 <section class="part" id="kit">
   <div class="part-head">
-    <p class="kicker">Чемоданчик практик · 13 аудио</p>
+    <p class="kicker"><!--@if personal-->Чемоданчик практик · 13 аудио<!--@endif--><!--@if share-->Чемоданчик практик<!--@endif--></p>
     <h2>Какая практика подходит сейчас</h2>
-    <p class="lede muted">Выбери зону — увидишь, что работает. Курс советует оставить практики, которые зашли: они останутся с тобой надолго.</p>
+    <p class="lede muted">Выбери зону — увидишь, что работает. Оставь те практики, которые зашли: они останутся с тобой надолго.</p>
   </div>
   <div class="col" style="gap:12px">
     <div class="zone-pick" id="zone-pick" role="group" aria-label="Выбор зоны"></div>
@@ -1427,7 +1429,7 @@ body.touring main{padding-bottom:150px}
     <b>По расписанию</b>
     <div class="kit-list" id="kit-plan"></div>
     <p class="note">Тревожные симптомы тела (боль в груди, обморок) или мысли о самоповреждении — это не про практики. Звони в экстренную службу (112 в Европе, 911 в США и Канаде, 999 в Великобритании) или иди к врачу сейчас.</p>
-    <p class="src">Источник: <a data-l="2.6">урок 2.6</a>, <a data-l="5.2">урок 5.2</a>, протокол <a data-p="SANE (острое состояние)">«SANE»</a>.</p>
+    <!--@if personal--><p class="src">Источник: <a data-l="2.6">урок 2.6</a>, <a data-l="5.2">урок 5.2</a>, протокол <a data-p="SANE (острое состояние)">«SANE»</a>.</p><!--@endif-->
   </div>
 </section>
 
@@ -1436,7 +1438,7 @@ body.touring main{padding-bottom:150px}
 
 <!-- ================= NUMBERS ================= -->
 <section class="part" id="numbers">
-  <div class="part-head"><p class="kicker">Шпаргалка</p><h2>Числа курса</h2></div>
+  <div class="part-head"><p class="kicker">Шпаргалка</p><h2>Числа метода</h2></div>
   <div class="numgrid">
     <div class="numt"><b>10 / 90</b><span>10% бодрствования на перемены, 90% — рутина</span></div>
     <div class="numt"><b>3 · 3 · 30</b><span>3 недели, 3 проекта, 30 часов</span></div>
@@ -1451,12 +1453,12 @@ body.touring main{padding-bottom:150px}
   </div>
 </section>
 
-<!-- ================= SCIENCE ================= -->
+<!--@if personal--><!-- ================= SCIENCE ================= -->
 <section class="part" id="science">
   <div class="part-head">
     <p class="kicker">Честная пометка</p>
     <h2>Где наука может говорить иначе</h2>
-    <p class="lede muted">Метод подан как есть. Но часть чисел курса стоит проверить: на них держатся практики. Это кандидаты на проверку, вердиктов пока нет.</p>
+    <p class="lede muted">Метод подан как есть. Но часть чисел метода стоит проверить: на них держатся практики. Это кандидаты на проверку, вердиктов пока нет.</p>
   </div>
   <div class="sci-list">
     <div class="scard"><b>Дофамин — газ, серотонин — тормоз; на этом деление на Драйв и Кайф</b><span>Роли медиаторов сложнее.</span><i>ждёт проверки</i></div>
@@ -1470,19 +1472,19 @@ body.touring main{padding-bottom:150px}
   </div>
 <!--@slot:scienceSrc-->  <p class="src" style="margin-top:10px">Полный список из 24 пунктов — в скилле /nif, файл science.md.</p>
 <!--@endslot--></section>
-
+<!--@endif-->
 
 <!-- ================= SKILL ================= -->
 <section class="part" id="skill">
   <div class="part-head">
     <p class="kicker">Скилл /nif для Claude Code</p>
     <h2>Как скилл помогает идти по методу</h2>
-    <p class="lede muted">Пять режимов. Каждое утверждение — со ссылкой на урок. Цитат курса нет: метод пересказан своими словами. Ниже — примеры диалогов.</p>
+    <p class="lede muted"><!--@if personal-->Пять режимов. Каждое утверждение — со ссылкой на урок. Цитат курса нет: метод пересказан своими словами. Ниже — примеры диалогов.<!--@endif--><!--@if share-->Пять режимов. Метод пересказан своими словами, без цитат. Ниже — примеры диалогов, в скобках скилл пишет, откуда взят совет.<!--@endif--></p>
   </div>
   <div class="modes">
     <div class="mode"><h3>1 · Где я и что дальше</h3>
-      <p class="bub me">Что сегодня по курсу?</p>
-      <p class="bub ai">Среда, третий день спринта. Аудио дня — около 8 минут: к нейрозарядке добавляется сканирование тела, потом стендап — зона, хороший момент и три приоритета на сутки (аудио дня 3). Уроки недели — 3.1–3.4.</p></div>
+      <p class="bub me">Что мне делать сегодня по спринту?</p>
+      <p class="bub ai">Третий день спринта, первая неделя. Сегодня — стендап на 5 минут: зона на шкале, хороший момент за сутки, до трёх приоритетов (урок 1.7). В выходные — недельная рефлексия, около 20 минут (урок 1.7).</p></div>
     <div class="mode"><h3>2 · Вопрос по методу</h3>
       <p class="bub me">Сколько часов закладывать на спринт?</p>
       <p class="bub ai">30 часов на все три проекта — это 10% бодрствования (урок 1.4). Делить можно не поровну. Если спринт первый или стресс высокий, больше не бери (урок 1.4).</p></div>
@@ -1497,7 +1499,7 @@ body.touring main{padding-bottom:150px}
         <tr><td>Буфер 20–30% (урок 1.6)</td><td>План на всё время</td><td>Оставь запас</td></tr></table></div></div>
     <div class="mode"><h3>5 · Проекты спринта</h3>
       <p class="bub me">Хочу на спринт марафон, английский и досмотреть сериал.</p>
-      <p class="bub ai">Марафон — Драйв: это личный вызов (урок 1.5). Английский — тоже Драйв, оставь один. Сериал запоем курс в Кайф не берёт. Фундамента нет: подойдут сон, еда или движение (урок 1.5).</p></div>
+      <p class="bub ai">Марафон — Драйв: это личный вызов (урок 1.5). Английский — тоже Драйв, оставь один. Сериал запоем метод в Кайф не берёт. Фундамента нет: подойдут сон, еда или движение (урок 1.5).</p></div>
   </div>
   <p class="src" style="margin-top:10px">Скилл отвечает обычным текстом и задаёт не больше одного вопроса за ход. При тревожных симптомах тела он не даёт практик, а сразу направляет к врачу или в экстренную службу.</p>
 </section>
@@ -1507,20 +1509,20 @@ body.touring main{padding-bottom:150px}
   <div class="part-head">
     <p class="kicker">Как поставить</p>
     <h2>Две команды в терминале</h2>
-    <p class="lede muted">Нужен Claude Code. Скиллу не нужны ни курс, ни заметки, ни аудио: метод уже внутри, своими словами.</p>
+    <p class="lede muted">Нужен Claude Code. Скиллу не нужны ни заметки, ни аудио: метод уже внутри, своими словами.</p>
   </div>
   <div class="col" style="gap:8px;max-width:780px">
     <div class="cmd"><code>claude plugin marketplace add https://gitlab.com/beCyborg/jadlis-hub.git</code><button class="btn" type="button" data-copy="claude plugin marketplace add https://gitlab.com/beCyborg/jadlis-hub.git">Копировать</button></div>
     <div class="cmd"><code>claude plugin install jadlis-nif@jadlis</code><button class="btn" type="button" data-copy="claude plugin install jadlis-nif@jadlis">Копировать</button></div>
     <div class="row"><button class="btn primary" type="button" data-copy="claude plugin marketplace add https://gitlab.com/beCyborg/jadlis-hub.git&#10;claude plugin install jadlis-nif@jadlis">Скопировать обе</button></div>
-    <p class="small muted">Потом в Claude Code напиши <b>/jadlis-nif:nif что дальше по курсу?</b> Скилл спросит дату старта спринта и поведёт дальше. Код и описание — <a href="https://gitlab.com/beCyborg/jadlis-nif" target="_blank" rel="noopener">gitlab.com/beCyborg/jadlis-nif</a>.</p>
+    <p class="small muted">Потом спроси в Claude Code о своём, например: <b>/jadlis-nif:nif какую практику сделать сейчас?</b> Код и описание — <a href="https://gitlab.com/beCyborg/jadlis-nif" target="_blank" rel="noopener">gitlab.com/beCyborg/jadlis-nif</a>.</p>
   </div>
 </section>
 <!--@endif-->
 
 </main>
 <!--@slot:footer--><footer class="wrap">
-  <p>Метод нейроинтеграции создала Катерина Ленгольд, программу ведёт Институт Нейроинтеграции. Эта страница — неофициальный конспект: пересказ своими словами, без текстов, слайдов и аудио курса. Она не заменяет курс, врача или психотерапевта. Если правообладатель попросит убрать конспект, я его уберу.</p>
+  <p>Автор метода нейроинтеграции — Катерина Ленгольд, Институт Нейроинтеграции. Эта страница — неофициальный конспект: пересказ своими словами, без текстов, слайдов и аудио курса. Она не заменяет врача или психотерапевта. Если правообладатель попросит убрать конспект, я его уберу.</p>
 </footer>
 <!--@endslot-->
 <div class="vox" id="vox" role="group" aria-label="Озвучка">
@@ -1587,7 +1589,7 @@ function wireLinks(root = document) {
 }
 
 /* ---------- voice narration (ElevenLabs clips in audio/) ---------- */
-const VOX_IDS = new Set(["intro-hero", "intro-map", "week-0", "week-1", "week-2", "week-3", "week-4", "week-5", "week-6", "iceberg-0", "iceberg-1", "iceberg-2", "iceberg-3", "iceberg-4", "iceberg-5", "homeo-0", "homeo-1", "homeo-2", "homeo-3", "homeo-4", "neuron-0", "neuron-1", "neuron-2", "neuron-3", "neuron-4", "neuron-5", "intro-gas", "sprint-0", "sprint-1", "sprint-2", "sprint-3", "sprint-4", "sprint-5", "intro-sort", "plan-0", "plan-1", "plan-2", "plan-3", "plan-4", "refl-0", "refl-1", "refl-2", "refl-3", "refl-4", "refl-5", "intro-trail", "intro-prism", "body-0", "body-1", "body-2", "body-3", "body-4", "cort-0", "cort-1", "cort-2", "cort-3", "cort-4", "intro-scale", "zone-0", "zone-1", "zone-2", "zone-3", "zone-4", "zone-5", "zone-6", "sane-0", "sane-1", "sane-2", "sane-3", "sane-4", "intro-breath", "phrase-0", "phrase-1", "phrase-2", "phrase-3", "intro-battery", "intro-day", "modes-0", "modes-1", "modes-2", "modes-3", "modes-4", "intro-orbits", "orb-0", "orb-1", "orb-2", "intro-orbquiz", "surf-0", "surf-1", "surf-2", "surf-3", "surf-4", "surf-5", "focus-0", "focus-1", "focus-2", "integ-0", "integ-1", "integ-2", "integ-3", "integ-4", "integ-5", "intro-bins", "ns2-0", "ns2-1", "ns2-2", "ns2-3", "intro-graph", "intro-kit", "tour-intro", "tour-skill", "tour-outro", "tour-b2", "tour-b3", "tour-b4", "tour-b5", "tour-b6", "tour-b7", "tour-b8", "tour-b9", "tour-b10", "tour-b11", "tour-b12", "tour-b13", "tour-b14", "tour-b15"]);
+const VOX_IDS = new Set(["intro-hero", "intro-map", "week-0", "week-1", "week-2", "week-3", "week-4", "week-5", "week-6", "iceberg-0", "iceberg-1", "iceberg-2", "iceberg-3", "iceberg-4", "iceberg-5", "homeo-0", "homeo-1", "homeo-2", "homeo-3", "homeo-4", "neuron-0", "neuron-1", "neuron-2", "neuron-3", "neuron-4", "neuron-5", "intro-gas", "sprint-0", "sprint-1", "sprint-2", "sprint-3", "sprint-4", "sprint-5", "intro-sort", "plan-0", "plan-1", "plan-2", "plan-3", "plan-4", "refl-0", "refl-1", "refl-2", "refl-3", "refl-4", "refl-5", "intro-trail", "intro-prism", "body-0", "body-1", "body-2", "body-3", "body-4", "cort-0", "cort-1", "cort-2", "cort-3", "cort-4", "intro-scale", "zone-0", "zone-1", "zone-2", "zone-3", "zone-4", "zone-5", "zone-6", "sane-0", "sane-1", "sane-2", "sane-3", "sane-4", "intro-breath", "phrase-0", "phrase-1", "phrase-2", "phrase-3", "intro-battery", "intro-day", "modes-0", "modes-1", "modes-2", "modes-3", "modes-4", "intro-orbits", "orb-0", "orb-1", "orb-2", "intro-orbquiz", "surf-0", "surf-1", "surf-2", "surf-3", "surf-4", "surf-5", "focus-0", "focus-1", "focus-2", "integ-0", "integ-1", "integ-2", "integ-3", "integ-4", "integ-5", "intro-bins", "ns2-0", "ns2-1", "ns2-2", "ns2-3", "intro-graph", "intro-kit", "tour-intro", "tour-skill", "tour-outro", "tour-b2", "tour-b3", "tour-b4", "tour-b5", "tour-b6", "tour-b7", "tour-b8", "tour-b9", "tour-b10", "tour-b11", "tour-b12", "tour-b13", "tour-b14", "tour-b15", "tour-actions"]);
 const CLIP = BUILD.clips || {};
 const clipUrl = id => 'audio/' + (CLIP[id] || id) + '.mp3';
 const Vox = (() => {
@@ -1748,7 +1750,7 @@ function setupNav() {
 const ZONES = [
   { name:'фиолетовая', short:'фиол.', c:'--z1', fam:'Выгорание', feel:'Апатия, отрешённость. Ничего не хочется и не можется.', voice:'«Ничего не хочу, отстаньте»', ctrl:'низкая', react:'низкая',
     plan:'Сон на первом месте. Меньше стимуляции: digital detox, меньше сахара и соцсетей. Крошечные задачи, засчитывай любой шаг. Время с близкими. Не гонись за внешней мотивацией.',
-    prac:'Курс: только через тело — дыхание с длинным выдохом. Голова здесь почти не работает.', osc:[.07,.32,0] },
+    prac:'Метод: только через тело — дыхание с длинным выдохом. Голова здесь почти не работает.', osc:[.07,.32,0] },
   { name:'синяя', short:'син.', c:'--z2', fam:'Выгорание', feel:'Пассивность. Просыпаешься уже уставшим, трудно планировать и решать, тяжело заставить себя даже любимое.', voice:'', ctrl:'низкая', react:'низкая',
     plan:'Проверь: не просто ли это усталость? Не хочется вообще ничего — помогут сон и еда. Не хочется конкретного — это синяя зона: сон, меньше стимуляции, крошечные задачи, близкие.',
     prac:'Подходят и тело, и голова: между оранжевой и синей зонами фраза-интеграция работает.', osc:[.16,.5,0] },
@@ -1766,7 +1768,7 @@ const ZONES = [
     prac:'Дыхание с длинным выдохом или фраза-интеграция. Не отпустило — прогулка 15–20 минут.', osc:[.72,2.5,.16] },
   { name:'красная', short:'красн.', c:'--z7', fam:'Дистресс', feel:'Паника, неуправляемое состояние.', voice:'', ctrl:'низкая', react:'чрезмерная',
     plan:'Как в оранжевой: отмени лишнее, знакомая рутина, островки стабильности, сон не урезай.',
-    prac:'Курс: только через тело — дыхание с длинным выдохом, потом прогулка. Голова здесь почти не работает.', osc:[.9,3.6,.38] }
+    prac:'Метод: только через тело — дыхание с длинным выдохом, потом прогулка. Голова здесь почти не работает.', osc:[.9,3.6,.38] }
 ];
 if (BUILD.zones) BUILD.zones.forEach((o, k) => { if (o) Object.assign(ZONES[k], o); });
 
@@ -1813,6 +1815,7 @@ const WEEKS = [
 ];
 function setupWeeks() {
   const grid = $('#wk-grid'), panel = $('#wk-panel'), here = currentWeek();
+  if (!grid) return;
   let sel = here ?? 0, t = null;
   WEEKS.forEach(w => {
     const b = document.createElement('button'); b.type = 'button'; b.className = 'wk'; b.setAttribute('aria-pressed', 'false');
@@ -1981,15 +1984,15 @@ const SORT = [
   ['Ложиться на 15 минут раньше каждую неделю', 'Ф', 'Сон — первая тема Фундамента.'],
   ['Подготовиться к марафону', 'Д', 'Личный вызов — это Драйв. В Фундамент марафон не идёт.'],
   ['Приготовить утренний кофе и насладиться им', 'К', 'Ощущения, ради процесса, с вниманием.'],
-  ['Досмотреть сериал за выходные', '—', 'Сериалы запоем курс прямо исключает из Кайфа.'],
+  ['Досмотреть сериал за выходные', '—', 'Сериалы запоем метод прямо исключает из Кайфа.'],
   ['Провести презентацию идеи начальству', 'Д', 'Рабочая задача подходит, если выводит за привычное.'],
   ['Сдать квартальный отчёт, как каждый квартал', '—', 'Это рутина, она живёт в 90%, а не в проектах.'],
-  ['Сходить на 5 разных тренировок и выбрать свою', 'Ф', 'Движение — тема Фундамента; пример из урока.'],
+  ['Сходить на 5 разных тренировок и выбрать свою', 'Ф', 'Движение — тема Фундамента.'],
   ['Поиграть в настолки с теми, с кем уже хорошо', 'К', 'Люди, с которыми уже хорошо, — Кайф. Расширять круг — Драйв.'],
   ['Начать курс БАДов без назначения врача', '—', 'Самолечение и БАДы без врача исключены из Фундамента.'],
   ['Найти друзей после 30', 'Д', 'Социальный вектор Драйва: расширить круг.'],
   ['Неделю записывать свой рацион', 'Ф', 'Питание — тема Фундамента.'],
-  ['Три вечера за чтением книги', 'К', 'Игра и хобби — Кайф; пример со слайда.']
+  ['Три вечера за чтением книги', 'К', 'Игра и хобби — Кайф.']
 ];
 const ORB_Q = (BUILD.quiz && BUILD.quiz.orb) || [
   ['«Работа — не главное в жизни, как-нибудь переживу»', 'I', 'Отрицание важности — орбита игнорирования.'],
@@ -2006,7 +2009,7 @@ const BINS_Q = (BUILD.quiz && BUILD.quiz.bins) || [
   ['«Да, это точно моё направление»', 'go', 'Это маркер «подходит — продолжаем».'],
   ['«Вижу, что расту, и уже что-то получается»', 'go', 'Рост и движение — продолжаем.'],
   ['«Попробовал — не моё, удовольствия нет»', 'no', 'Не подходит — отказываемся.'],
-  ['Вернусь к этому потом: сейчас есть дела важнее', 'no', 'Курс относит это к «отказываемся» на этот спринт.'],
+  ['Вернусь к этому потом: сейчас есть дела важнее', 'no', 'Метод относит это к «отказываемся» на этот спринт.'],
   ['«Делаю это уже легко, без всякого усилия»', 'rt', 'Устоялось — переводим в рутину.'],
   ['Вызова в этом больше нет, но польза есть', 'rt', 'Это маркер перевода в рутину: место освобождается для нового.']
 ];
@@ -2329,7 +2332,7 @@ function setupDay() {
     const sun = $('#day-sun'); sun.setAttribute('cx', x); sun.style.fill = v < 66 ? 'var(--z5)' : 'var(--muted)';
     let h, p;
     if (v < 36) { h = 'Утро — время для сложного'; p = 'Задачи с сопротивлением и высокой концентрацией. Кортизол выше, вниманию легче.'; }
-    else if (v < 64) { h = 'Середина дня — сверяйся с зоной'; p = 'Курс отдельно этот отрезок не расписывает. Жёлтая зона — в обед замедлись.'; }
+    else if (v < 64) { h = 'Середина дня — сверяйся с зоной'; p = 'Метод отдельно этот отрезок не расписывает. Жёлтая зона — в обед замедлись.'; }
     else { h = 'Вечер — время для простого'; p = 'Рутина, общение, замедление и Кайф. Кортизол ниже.'; }
     out.innerHTML = `<b>${h}</b><span class="muted">${p}</span>`; range.value = v;
   }
@@ -2501,7 +2504,7 @@ function setupGraph() {
     g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(n.id, true); } });
     nodeEls[n.id] = g;
   });
-  const srcLink = s => s.startsWith('P:') ? `<a data-p="${s.slice(2)}">протокол «${s.slice(2)}»</a>` : `<a data-l="${s}">урок ${s}</a>`;
+  const srcLink = s => BUILD.share ? '' : s.startsWith('P:') ? `<a data-p="${s.slice(2)}">протокол «${s.slice(2)}»</a>` : `<a data-l="${s}">урок ${s}</a>`;
   function select(id, user) {
     const rel = new Set([id]);
     EDGES.forEach(([a, b], k) => { const on = a === id || b === id; edgeEls[k].classList.toggle('act', on); edgeEls[k].classList.toggle('dim', !on); if (on) { rel.add(a); rel.add(b); } });
@@ -2511,7 +2514,7 @@ function setupGraph() {
       const other = a === id ? b : a, dir = a === id ? '→' : '←';
       return `<li><span>${dir} <button type="button" data-go="${other}">${byId[other].label}</button></span><span>${why}. <span class="muted small">${srcLink(s)}</span></span></li>`;
     }).join('');
-    panel.innerHTML = `<div class="gpanel-x"><span class="grip" aria-hidden="true"></span></div><div class="row" style="justify-content:space-between;flex-wrap:nowrap"><h3>${n.label}</h3><button class="ib gpanel-close" type="button" aria-label="Закрыть">✕</button></div><p>${n.about} <a data-l="${n.l}">Урок ${n.l}</a></p><b class="small muted">→ ведёт к · ← зависит от</b><ul class="glinks">${items}</ul>`;
+    panel.innerHTML = `<div class="gpanel-x"><span class="grip" aria-hidden="true"></span></div><div class="row" style="justify-content:space-between;flex-wrap:nowrap"><h3>${n.label}</h3><button class="ib gpanel-close" type="button" aria-label="Закрыть">✕</button></div><p>${n.about}${BUILD.share ? '' : ` <a data-l="${n.l}">Урок ${n.l}</a>`}</p><b class="small muted">→ ведёт к · ← зависит от</b><ul class="glinks">${items}</ul>`;
     wireLinks(panel);
     $$('[data-go]', panel).forEach(b => b.addEventListener('click', () => select(b.dataset.go, true)));
     const cl = $('.gpanel-close', panel); cl.style.display = mqPhone.matches ? '' : 'none'; cl.addEventListener('click', () => panel.classList.remove('open'));
@@ -2538,13 +2541,13 @@ const PRAC = [
   ['13','Трансформирующая рефлексия','26,9','plan','Раз в месяц, на неделе интеграции.']
 ];
 const RECO = [
-  'Курс: начни с тела. Дыхание с длинным выдохом 1–5 минут. Не отпустило — прогулка 15–20 минут. Голова здесь почти не работает.',
+  'Метод: начни с тела. Дыхание с длинным выдохом 1–5 минут. Не отпустило — прогулка 15–20 минут. Голова здесь почти не работает.',
   'Сначала проверь: это усталость или синяя зона? Дальше подходят и тело, и голова.',
   'Ты в интеграции: доступно всё. Нужен тонус — свет, музыка, душ. Сработала орбита — сёрфинг.',
   'Ты в интеграции: доступно всё. Лучшее время для сёрфинга, растяжки для мозга и сложных задач.',
   'Ты в интеграции: доступно всё. Держи паузы, чтобы не съехать в оранжевую.',
   'Подходят и тело, и голова: дыхание с длинным выдохом или фраза-интеграция. Не отпустило — прогулка 15–20 минут.',
-  'Курс: только через тело. Дыхание с длинным выдохом, потом прогулка. Голова здесь почти не работает.'
+  'Метод: только через тело. Дыхание с длинным выдохом, потом прогулка. Голова здесь почти не работает.'
 ];
 if (BUILD.reco) Object.keys(BUILD.reco).forEach(k => { RECO[+k] = BUILD.reco[k]; });
 function setupKit() {
@@ -2558,8 +2561,8 @@ function setupKit() {
   function status(kind, k) {
     const edge = k === 0 || k === 6, integ = k >= 2 && k <= 4;
     if (kind === 'body') return edge ? ['first', 'первым'] : ['ok', 'подходит'];
-    if (kind === 'head') return edge ? ['no', 'не сейчас', 'В красной и фиолетовой зонах голова почти не работает (урок 2.6).'] : ['ok', BUILD.bodyFirst && (k === 1 || k === 5) ? 'после тела' : 'подходит'];
-    if (kind === 'surf') return integ ? ['ok', 'подходит'] : ['no', 'не сейчас', 'Сначала верни состояние в интеграцию (урок 5.2).'];
+    if (kind === 'head') return edge ? ['no', 'не сейчас', 'В красной и фиолетовой зонах голова почти не работает' + (BUILD.share ? '.' : ' (урок 2.6).')] : ['ok', BUILD.bodyFirst && (k === 1 || k === 5) ? 'после тела' : 'подходит'];
+    if (kind === 'surf') return integ ? ['ok', 'подходит'] : ['no', 'не сейчас', 'Сначала верни состояние в интеграцию' + (BUILD.share ? '.' : ' (урок 5.2).')];
     if (kind === 'mix') return ['plan', 'утром'];
     return ['ok', 'подходит'];
   }
@@ -2596,24 +2599,27 @@ const Tour = (() => {
   const later = (ms, fn) => { const tk = token; setTimeout(() => { if (tk === token) fn(); }, ms); };
   const SAY_WITH = (id, fn) => () => { fn(); return S(id)(); };
   const each = (ks, fn) => ks.map(k => () => fn(k));
-  const CH = [
-    { t: 'Какие проблемы решает метод', run: [G('#problems'), S('tour-intro')] },
-    { t: 'Программа на одной ленте', run: [G('#map'), S('tour-b2'), S('intro-map'), ...each([0, 1, 2, 3, 4, 5, 6], k => { if (weeksPick) weeksPick(k); return S('week-' + k)(); })] },
-    { t: 'Айсберг: три слоя', run: [G('#iceberg'), S('tour-b3'), P('iceberg')] },
-    { t: 'Почему перемены откатываются', run: [G('#homeo'), S('tour-b4'), P('homeo'), C('#g10-play'), () => wait(6000)] },
-    { t: 'Нейроны, газ и тормоз', run: [G('#neuron'), S('tour-b5'), P('neuron'), G('#gasbrake'), SAY_WITH('intro-gas', () => { const b = $('[data-gb="DK"]'); if (b) b.click(); }), () => wait(1500)] },
-    { t: 'Нейроспринт 3 · 3 · 30', run: [G('#sprint'), S('tour-b6'), P('sprint'), G('#sort'), S('intro-sort')] },
-    { t: 'План, рефлексии, привычка', run: [G('#plan'), S('tour-b7'), P('plan'), P('refl'), G('#trail'), SAY_WITH('intro-trail', () => { [0, 1300, 2600, 3900].forEach(ms => later(ms, () => { const b = $('#tr-go'); if (b) b.click(); })); })] },
-    { t: 'Стресс и кортизол', run: [G('#prism-scene'), S('tour-b8'), SAY_WITH('intro-prism', () => { const f = $('[data-prism="farm"]'); if (f) f.click(); later(7000, () => { const c = $('[data-prism="corp"]'); if (c) c.click(); }); }), () => wait(1500), P('body'), P('cort')] },
-    { t: 'Шкала НейроБаланса', run: [G('#scale'), S('tour-b9'), S('intro-scale'), ...each([0, 1, 2, 3, 4, 5, 6], k => { if (scaleShow) scaleShow(k); return S('zone-' + k)(); })] },
-    { t: 'SANE и дыхание', run: [G('#sane'), S('tour-b10'), P('sane'), G('#breathing'), SAY_WITH('intro-breath', () => { const b = $('#b-start'); if (b) b.click(); }), () => { const b = $('#b-start'); if (b && /Стоп/.test(b.textContent)) b.click(); return wait(300); }, P('phrase')] },
-    { t: 'Тело и ритм дня', run: [G('#battery'), S('tour-b11'), SAY_WITH('intro-battery', () => { const b = $('[data-bat="blue"]'); if (b) b.click(); }), G('#day'), SAY_WITH('intro-day', () => { const b = $('#day-play'); if (b) b.click(); }), () => wait(1500)] },
-    { t: 'Мышление и НейроОрбиты', run: [G('#modes'), S('tour-b12'), P('modes'), G('#orbits'), S('intro-orbits'), ...each([0, 1, 2], k => { if (orbitsShow) orbitsShow(k); return S('orb-' + k)(); }), G('#orb-quiz'), S('intro-orbquiz'), P('surf'), P('focus')] },
-    { t: 'Цикл и связи', run: [G('#integ'), S('tour-b13'), P('integ'), G('#bins-quiz'), S('intro-bins'), P('ns2'), G('#links'), S('intro-graph'), G('#kit'), S('intro-kit')] },
-    { t: 'Как помогает скилл', run: [G('#skill'), S('tour-b14'), S('tour-skill')] },
-    { t: 'Как поставить', share: true, run: [G('#install'), S('tour-b15'), S('tour-outro')] }
-  ];
-  const chapters = CH.filter(c => !c.share || BUILD.share);
+  const CH = {
+    problems: { t: 'Какие проблемы решает метод', run: [G('#problems'), S('tour-intro')] },
+    program: { t: 'Программа на одной ленте', run: [G('#map'), S('tour-b2'), S('intro-map'), ...each([0, 1, 2, 3, 4, 5, 6], k => { if (weeksPick) weeksPick(k); return S('week-' + k)(); })] },
+    iceberg: { t: 'Айсберг: три слоя', run: [G('#iceberg'), S('tour-b3'), P('iceberg')] },
+    homeo: { t: 'Почему перемены откатываются', run: [G('#actions'), S('tour-actions'), G('#homeo'), S('tour-b4'), P('homeo'), C('#g10-play'), () => wait(6000)] },
+    neuron: { t: 'Нейроны, газ и тормоз', run: [G('#neuron'), S('tour-b5'), P('neuron'), G('#gasbrake'), SAY_WITH('intro-gas', () => { const b = $('[data-gb="DK"]'); if (b) b.click(); }), () => wait(1500)] },
+    sprint: { t: 'Нейроспринт 3 · 3 · 30', run: [G('#sprint'), S('tour-b6'), P('sprint'), G('#sort'), S('intro-sort')] },
+    plan: { t: 'План, рефлексии, привычка', run: [G('#plan'), S('tour-b7'), P('plan'), P('refl'), G('#trail'), SAY_WITH('intro-trail', () => { [0, 1300, 2600, 3900].forEach(ms => later(ms, () => { const b = $('#tr-go'); if (b) b.click(); })); })] },
+    stress: { t: 'Стресс и кортизол', run: [G('#prism-scene'), S('tour-b8'), SAY_WITH('intro-prism', () => { const f = $('[data-prism="farm"]'); if (f) f.click(); later(7000, () => { const c = $('[data-prism="corp"]'); if (c) c.click(); }); }), () => wait(1500), P('body'), P('cort')] },
+    scale: { t: 'Шкала НейроБаланса', run: [G('#scale'), S('tour-b9'), S('intro-scale'), ...each([0, 1, 2, 3, 4, 5, 6], k => { if (scaleShow) scaleShow(k); return S('zone-' + k)(); })] },
+    sane: { t: 'SANE и дыхание', run: [G('#sane'), S('tour-b10'), P('sane'), G('#breathing'), SAY_WITH('intro-breath', () => { const b = $('#b-start'); if (b) b.click(); }), () => { const b = $('#b-start'); if (b && /Стоп/.test(b.textContent)) b.click(); return wait(300); }, P('phrase')] },
+    day: { t: 'Тело и ритм дня', run: [G('#battery'), S('tour-b11'), SAY_WITH('intro-battery', () => { const b = $('[data-bat="blue"]'); if (b) b.click(); }), G('#day'), SAY_WITH('intro-day', () => { const b = $('#day-play'); if (b) b.click(); }), () => wait(1500)] },
+    thinking: { t: 'Мышление и НейроОрбиты', run: [G('#modes'), S('tour-b12'), P('modes'), G('#orbits'), S('intro-orbits'), ...each([0, 1, 2], k => { if (orbitsShow) orbitsShow(k); return S('orb-' + k)(); }), G('#orb-quiz'), S('intro-orbquiz'), P('surf'), P('focus')] },
+    cycle: { t: 'Цикл и связи', run: [G('#integ'), S('tour-b13'), P('integ'), G('#bins-quiz'), S('intro-bins'), P('ns2'), G('#links'), S('intro-graph'), G('#kit'), S('intro-kit')] },
+    skill: { t: 'Как помогает скилл', run: [G('#skill'), S('tour-b14'), S('tour-skill')] },
+    install: { t: 'Как поставить', run: [G('#install'), S('tour-b15'), S('tour-outro')] }
+  };
+  const ORDER = BUILD.share
+    ? ['problems', 'iceberg', 'scale', 'stress', 'sane', 'day', 'thinking', 'homeo', 'neuron', 'sprint', 'plan', 'cycle', 'skill', 'install']
+    : ['problems', 'program', 'iceberg', 'homeo', 'neuron', 'sprint', 'plan', 'stress', 'scale', 'sane', 'day', 'thinking', 'cycle', 'skill'];
+  const chapters = ORDER.map(k => CH[k]);
   async function wake(on) {
     try {
       if (on && !lock && navigator.wakeLock) { lock = await navigator.wakeLock.request('screen'); lock.addEventListener('release', () => { lock = null; }); }

@@ -13,7 +13,7 @@
 - Цитат курса нет. Скилл отказывается цитировать даже по просьбе.
 - При тревожных симптомах тела скилл не даёт практик и направляет в экстренную службу.
 - Личный профиль по желанию: свои ритуалы, ссылки, номер экстренной службы, свой календарь.
-- Атлас метода с голосовым гидом: одна кнопка, 15 глав.
+- Атлас метода с голосовым гидом: одна кнопка, 14 глав, от состояния к мышлению и действиям.
 
 ### For agents
 
@@ -22,4 +22,4 @@
 - Added: `skills/nif/references/` (85 files + `index.json`), `tools/build_index.py`, `tools/check_refs.py` (banned personal markers, source-place markers, quotes over 6 words, broken links, index sync).
 - Added: `userConfig.PROFILE_PATH` (string, optional).
 - Added: `evals/` — 20 cases for `claude plugin eval`; `tests/test_nif_cli.py`.
-- Added: `docs/atlas/` — `atlas.src.html`, `build_atlas.py` (`--share` / `--personal`), `narration.json`, `tts_gen.py`.
+- Added: `docs/atlas/` — `atlas.src.html`, `build_atlas.py` (`--share` / `--personal`; `<!--@move-->` / `<!--@put-->` reorder the public build), `narration.json`, `tts_gen.py`.

@@ -2,12 +2,13 @@
 """Build the NIF atlas page from atlas.src.html.
 
   python3 build_atlas.py --share --out build/share                      # public version
-  python3 build_atlas.py --personal ~/private/atlas-personal.json --out build/personal
+  python3 build_atlas.py --personal path/to/atlas-personal.json --out build/personal
   ... [--audio DIR]   # also link DIR as <out>/audio for a local preview
 
 Source markers:
   <!--@if share-->…<!--@endif-->           kept only in the public build (also @if personal)
   <!--@slot:name-->default<!--@endslot-->  the personal build may replace the default with slots[name]
+  <!--@move:name-->…<!--@endmove-->        the public build moves this block to <!--@put:name-->
   /*@BUILD*/{…}/*@END*/                     page config; the personal build passes its JSON (without slots)
 The personal JSON never enters this repository.
 """
@@ -17,11 +18,23 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 IF = re.compile(r'<!--@if (share|personal)-->(.*?)<!--@endif-->', re.S)
 SLOT = re.compile(r'<!--@slot:(\w+)-->(.*?)<!--@endslot-->', re.S)
 BUILD = re.compile(r'/\*@BUILD\*/.*?/\*@END\*/', re.S)
+MOVE = re.compile(r'<!--@move:(\w+)-->(.*?)<!--@endmove-->', re.S)
+PUT = re.compile(r'<!--@put:(\w+)-->')
+
+
+def move_blocks(out, share):
+    blocks = dict((m.group(1), m.group(2)) for m in MOVE.finditer(out))
+    puts = PUT.findall(out)
+    if sorted(blocks) != sorted(puts):
+        raise SystemExit('@move and @put do not match: %s vs %s' % (sorted(blocks), sorted(puts)))
+    out = MOVE.sub(lambda m: '' if share else m.group(2), out)
+    return PUT.sub(lambda m: blocks[m.group(1)] if share else '', out)
 
 
 def build(src, personal=None):
     mode = 'personal' if personal else 'share'
     out = IF.sub(lambda m: m.group(2) if m.group(1) == mode else '', src)
+    out = move_blocks(out, personal is None)
     slots = (personal or {}).get('slots') or {}
     out = SLOT.sub(lambda m: slots.get(m.group(1), m.group(2)), out)
     cfg = dict((k, v) for k, v in (personal or {}).items() if k != 'slots')
