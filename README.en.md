@@ -9,7 +9,7 @@ retold in plain words inside the plugin. The retelling is in Russian; the skill 
 language.
 
 ```
-claude plugin marketplace add https://gitlab.com/beCyborg/jadlis-hub.git
+claude plugin marketplace add https://github.com/beCyborg/jadlis-hub.git
 claude plugin install jadlis-nif@jadlis
 ```
 
@@ -62,7 +62,7 @@ protocols, 4 glossaries, the programme map, the scale zones and 24 science notes
 You need Claude Code. No API keys or third-party subscriptions.
 
 ```
-claude plugin marketplace add https://gitlab.com/beCyborg/jadlis-hub.git
+claude plugin marketplace add https://github.com/beCyborg/jadlis-hub.git
 claude plugin install jadlis-nif@jadlis
 claude plugin list
 ```

@@ -8,7 +8,7 @@
 словами внутри плагина.
 
 ```
-claude plugin marketplace add https://gitlab.com/beCyborg/jadlis-hub.git
+claude plugin marketplace add https://github.com/beCyborg/jadlis-hub.git
 claude plugin install jadlis-nif@jadlis
 ```
 
@@ -60,7 +60,7 @@ claude plugin install jadlis-nif@jadlis
 Нужен Claude Code. Ключи API и подписки сторонних сервисов не нужны.
 
 ```
-claude plugin marketplace add https://gitlab.com/beCyborg/jadlis-hub.git
+claude plugin marketplace add https://github.com/beCyborg/jadlis-hub.git
 claude plugin install jadlis-nif@jadlis
 claude plugin list
 ```
